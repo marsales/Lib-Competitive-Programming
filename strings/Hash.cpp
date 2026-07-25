@@ -11,6 +11,13 @@ struct Hash {
     bool operator!=(const Hash& other) const {
         return !(*this == other);
     }
+
+    bool operator<(const Hash& other) const {
+        if (h1 != other.h1)
+            return h1 < other.h1;
+
+        return h2 < other.h2;
+    }
 };
 
 struct Hasher {
