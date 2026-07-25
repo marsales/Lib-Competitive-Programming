@@ -14,10 +14,22 @@ struct Hash {
 };
 
 struct Hasher {
-    static const ll P1 = 31;
-    static const ll P2 = 37;
     static const ll M1 = 1e9+33;
     static const ll M2 = 1e9+93;
+
+    inline static mt19937_64 rng{
+        static_cast<uint64_t>(
+            chrono::steady_clock::now()
+                .time_since_epoch()
+                .count()
+        )
+    };
+
+    inline static const ll P1 =
+        uniform_int_distribution<ll>(256, M1 - 2)(rng);
+
+    inline static const ll P2 =
+        uniform_int_distribution<ll>(256, M2 - 2)(rng);
 
     int n;
 
