@@ -1,5 +1,5 @@
-long long fexp(long long a, long long e, long long mod) {
-    long long r = 1 % mod;
+ll fexp(ll a, ll e, ll mod) {
+    ll r = 1 % mod;
     a %= mod;
 
     while (e > 0) {
