@@ -1,1 +1,70 @@
+\documentclass[8pt,a4paper,landscape]{article}
 
+\usepackage[
+    left=0.6cm,
+    right=0.6cm,
+    top=0.7cm,
+    bottom=0.7cm
+]{geometry}
+
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\setlength{\columnsep}{0.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Competitive Programming Notebook}
+\fancyhead[R]{\thepage}
+
+\titleformat{\section}
+{\large\bfseries}
+{\thesection}
+{0.5em}
+{}
+
+\titleformat{\subsection}
+{\normalsize\bfseries}
+{\thesubsection}
+{0.5em}
+{}
+
+\lstset{
+    language=C++,
+    basicstyle=\ttfamily\scriptsize,
+    columns=fullflexible,
+    keepspaces=true,
+    breaklines=true,
+    tabsize=2,
+    showstringspaces=false,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny,
+    xleftmargin=1em
+}
+
+\begin{document}
+
+\begin{center}
+    {\Huge Competitive Programming Notebook}
+
+    \vspace{0.2cm}
+
+    Maratona de Programação
+\end{center}
+
+\tableofcontents
+
+\newpage
+
+\begin{multicols}{2}
+
+%%CONTENT%%
+
+\end{multicols}
+
+\end{document}
